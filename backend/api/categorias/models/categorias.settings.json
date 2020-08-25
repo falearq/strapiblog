@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "categorias",
+  "info": {
+    "name": "Categorías"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "entradas": {
+      "collection": "categorias",
+      "via": "categoria"
+    },
+    "categoria": {
+      "model": "categorias",
+      "via": "entradas"
+    }
+  }
+}
